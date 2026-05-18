@@ -1,0 +1,598 @@
+{
+  "generatedAt": "2026-05-17T21:39:20.304Z",
+  "note": "Tight client-facing shortlist. Full library remains in /projects/kid-apollo/assets/moodboard/catalog.json. Wide backup remains in /projects/kid-apollo/assets/moodboard-selected/selection-wide.json.",
+  "count": 83,
+  "files": [
+    {
+      "name": "metal009_1k-jpg_color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_color.jpg",
+      "localPath": "assets/moodboard/materials/chrome/metal009_1k-jpg_color.jpg",
+      "role": "chrome rocket body"
+    },
+    {
+      "name": "metal009_1k-jpg_metalness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_metalness.jpg",
+      "localPath": "assets/moodboard/materials/chrome/metal009_1k-jpg_metalness.jpg",
+      "role": "chrome rocket body"
+    },
+    {
+      "name": "metal009_1k-jpg_normalgl.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_normalgl.jpg",
+      "localPath": "assets/moodboard/materials/chrome/metal009_1k-jpg_normalgl.jpg",
+      "role": "chrome rocket body"
+    },
+    {
+      "name": "metal009_1k-jpg_roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_roughness.jpg",
+      "localPath": "assets/moodboard/materials/chrome/metal009_1k-jpg_roughness.jpg",
+      "role": "chrome rocket body"
+    },
+    {
+      "name": "paintedmetal009_1k-jpg_color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_color.jpg",
+      "localPath": "assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_color.jpg",
+      "role": "apollo red metal"
+    },
+    {
+      "name": "paintedmetal009_1k-jpg_metalness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_metalness.jpg",
+      "localPath": "assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_metalness.jpg",
+      "role": "apollo red metal"
+    },
+    {
+      "name": "paintedmetal009_1k-jpg_normalgl.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_normalgl.jpg",
+      "localPath": "assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_normalgl.jpg",
+      "role": "apollo red metal"
+    },
+    {
+      "name": "paintedmetal009_1k-jpg_roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_roughness.jpg",
+      "localPath": "assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_roughness.jpg",
+      "role": "apollo red metal"
+    },
+    {
+      "name": "Metal008_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Color.jpg",
+      "role": "brass porthole"
+    },
+    {
+      "name": "Metal008_1K-JPG_Metalness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Metalness.jpg",
+      "localPath": "assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Metalness.jpg",
+      "role": "brass porthole"
+    },
+    {
+      "name": "Metal008_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/brass-metal/Metal008_1K-JPG_NormalGL.jpg",
+      "role": "brass porthole"
+    },
+    {
+      "name": "Metal008_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Roughness.jpg",
+      "role": "brass porthole"
+    },
+    {
+      "name": "fabric016_1k-jpg_color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_color.jpg",
+      "localPath": "assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_color.jpg",
+      "role": "goat fabric"
+    },
+    {
+      "name": "fabric016_1k-jpg_normalgl.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_normalgl.jpg",
+      "localPath": "assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_normalgl.jpg",
+      "role": "goat fabric"
+    },
+    {
+      "name": "fabric016_1k-jpg_opacity.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_opacity.jpg",
+      "localPath": "assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_opacity.jpg",
+      "role": "goat fabric"
+    },
+    {
+      "name": "fabric016_1k-jpg_roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_roughness.jpg",
+      "localPath": "assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_roughness.jpg",
+      "role": "goat fabric"
+    },
+    {
+      "name": "paper001_1k-jpg_color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_color.jpg",
+      "localPath": "assets/moodboard/materials/paper-labels/paper001_1k-jpg_color.jpg",
+      "role": "paper labels"
+    },
+    {
+      "name": "paper001_1k-jpg_normalgl.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_normalgl.jpg",
+      "localPath": "assets/moodboard/materials/paper-labels/paper001_1k-jpg_normalgl.jpg",
+      "role": "paper labels"
+    },
+    {
+      "name": "paper001_1k-jpg_roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_roughness.jpg",
+      "localPath": "assets/moodboard/materials/paper-labels/paper001_1k-jpg_roughness.jpg",
+      "role": "paper labels"
+    },
+    {
+      "name": "cardboardset001_1k-jpg_color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_color.jpg",
+      "localPath": "assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_color.jpg",
+      "role": "cardboard merch"
+    },
+    {
+      "name": "cardboardset001_1k-jpg_normalgl.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_normalgl.jpg",
+      "localPath": "assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_normalgl.jpg",
+      "role": "cardboard merch"
+    },
+    {
+      "name": "cardboardset001_1k-jpg_roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_roughness.jpg",
+      "localPath": "assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_roughness.jpg",
+      "role": "cardboard merch"
+    },
+    {
+      "name": "Road007_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Color.jpg",
+      "role": "launchpad concrete"
+    },
+    {
+      "name": "Road007_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_NormalGL.jpg",
+      "role": "launchpad concrete"
+    },
+    {
+      "name": "Road007_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Roughness.jpg",
+      "role": "launchpad concrete"
+    },
+    {
+      "name": "PaintedPlaster017_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Color.jpg",
+      "role": "painted room wall"
+    },
+    {
+      "name": "PaintedPlaster017_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_NormalGL.jpg",
+      "role": "painted room wall"
+    },
+    {
+      "name": "PaintedPlaster017_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Roughness.jpg",
+      "role": "painted room wall"
+    },
+    {
+      "name": "WoodFloor040_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Color.jpg",
+      "role": "warm room wood"
+    },
+    {
+      "name": "WoodFloor040_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_NormalGL.jpg",
+      "role": "warm room wood"
+    },
+    {
+      "name": "WoodFloor040_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Roughness.jpg",
+      "role": "warm room wood"
+    },
+    {
+      "name": "WoodFloor021_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/wood-floor-alt/WoodFloor021_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/wood-floor-alt/WoodFloor021_1K-JPG_Color.jpg",
+      "role": "warm room wood"
+    },
+    {
+      "name": "Rubber004_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Color.jpg",
+      "role": "rubber joints"
+    },
+    {
+      "name": "Rubber004_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_NormalGL.jpg",
+      "role": "rubber joints"
+    },
+    {
+      "name": "Rubber004_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Roughness.jpg",
+      "role": "rubber joints"
+    },
+    {
+      "name": "Plastic010_1K-JPG_Color.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Color.jpg",
+      "localPath": "assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Color.jpg",
+      "role": "vinyl plastic"
+    },
+    {
+      "name": "Plastic010_1K-JPG_NormalGL.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_NormalGL.jpg",
+      "localPath": "assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_NormalGL.jpg",
+      "role": "vinyl plastic"
+    },
+    {
+      "name": "Plastic010_1K-JPG_Roughness.jpg",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Roughness.jpg",
+      "localPath": "assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Roughness.jpg",
+      "role": "vinyl plastic"
+    },
+    {
+      "name": "border.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/border.glb",
+      "localPath": "assets/moodboard/models/room/border.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "column.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/column.glb",
+      "localPath": "assets/moodboard/models/room/column.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "floor.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/floor.glb",
+      "localPath": "assets/moodboard/models/room/floor.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "wall-corner.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/wall-corner.glb",
+      "localPath": "assets/moodboard/models/room/wall-corner.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "wall-window-round.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/wall-window-round.glb",
+      "localPath": "assets/moodboard/models/room/wall-window-round.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "wall.glb",
+      "type": "model",
+      "url": "/projects/kid-apollo/assets/moodboard/models/room/wall.glb",
+      "localPath": "assets/moodboard/models/room/wall.glb",
+      "role": "room blockout"
+    },
+    {
+      "name": "fireb0001.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0001.png",
+      "localPath": "assets/moodboard/sprites/fire/fireb0001.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "fireb0008.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0008.png",
+      "localPath": "assets/moodboard/sprites/fire/fireb0008.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "fireb0016.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0016.png",
+      "localPath": "assets/moodboard/sprites/fire/fireb0016.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "fireb0024.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0024.png",
+      "localPath": "assets/moodboard/sprites/fire/fireb0024.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "firesheet.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/firesheet.png",
+      "localPath": "assets/moodboard/sprites/fire/firesheet.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "firesheet5x5.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/fire/firesheet5x5.png",
+      "localPath": "assets/moodboard/sprites/fire/firesheet5x5.png",
+      "role": "rocket fire"
+    },
+    {
+      "name": "explosion00.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/explosion00.png",
+      "localPath": "assets/moodboard/sprites/smoke/explosion00.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "flash00.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/flash00.png",
+      "localPath": "assets/moodboard/sprites/smoke/flash00.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "flash04.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/flash04.png",
+      "localPath": "assets/moodboard/sprites/smoke/flash04.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "whitepuff00.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff00.png",
+      "localPath": "assets/moodboard/sprites/smoke/whitepuff00.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "whitepuff04.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff04.png",
+      "localPath": "assets/moodboard/sprites/smoke/whitepuff04.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "whitepuff08.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff08.png",
+      "localPath": "assets/moodboard/sprites/smoke/whitepuff08.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "whitepuff12.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff12.png",
+      "localPath": "assets/moodboard/sprites/smoke/whitepuff12.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "whitepuff16.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff16.png",
+      "localPath": "assets/moodboard/sprites/smoke/whitepuff16.png",
+      "role": "launch smoke"
+    },
+    {
+      "name": "fire_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/fire_01.png",
+      "localPath": "assets/moodboard/sprites/particles/fire_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "flame_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/flame_01.png",
+      "localPath": "assets/moodboard/sprites/particles/flame_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "flare_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/flare_01.png",
+      "localPath": "assets/moodboard/sprites/particles/flare_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "light_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/light_01.png",
+      "localPath": "assets/moodboard/sprites/particles/light_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "scorch_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/scorch_01.png",
+      "localPath": "assets/moodboard/sprites/particles/scorch_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "smoke_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/smoke_01.png",
+      "localPath": "assets/moodboard/sprites/particles/smoke_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "spark_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/spark_01.png",
+      "localPath": "assets/moodboard/sprites/particles/spark_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "spark_03.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/spark_03.png",
+      "localPath": "assets/moodboard/sprites/particles/spark_03.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "star_01.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/star_01.png",
+      "localPath": "assets/moodboard/sprites/particles/star_01.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "star_04.png",
+      "type": "image",
+      "url": "/projects/kid-apollo/assets/moodboard/sprites/particles/star_04.png",
+      "localPath": "assets/moodboard/sprites/particles/star_04.png",
+      "role": "particle accents"
+    },
+    {
+      "name": "spaceengine_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceengine_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/spaceengine_000.ogg",
+      "role": "engine tests"
+    },
+    {
+      "name": "spaceenginelarge_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginelarge_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/spaceenginelarge_000.ogg",
+      "role": "engine tests"
+    },
+    {
+      "name": "spaceenginelow_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginelow_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/spaceenginelow_000.ogg",
+      "role": "engine tests"
+    },
+    {
+      "name": "spaceenginesmall_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginesmall_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/spaceenginesmall_000.ogg",
+      "role": "engine tests"
+    },
+    {
+      "name": "thrusterfire_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/thrusterfire_000.ogg",
+      "role": "thruster tests"
+    },
+    {
+      "name": "thrusterfire_001.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_001.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/thrusterfire_001.ogg",
+      "role": "thruster tests"
+    },
+    {
+      "name": "thrusterfire_002.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_002.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/thrusterfire_002.ogg",
+      "role": "thruster tests"
+    },
+    {
+      "name": "impactmetal_000.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_000.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/impactmetal_000.ogg",
+      "role": "impact tests"
+    },
+    {
+      "name": "impactmetal_001.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_001.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/impactmetal_001.ogg",
+      "role": "impact tests"
+    },
+    {
+      "name": "impactmetal_002.ogg",
+      "type": "sound",
+      "url": "/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_002.ogg",
+      "localPath": "assets/moodboard/sounds/sci-fi/impactmetal_002.ogg",
+      "role": "impact tests"
+    },
+    {
+      "name": "cassette_player_1k.gltf",
+      "type": "model",
+      "role": "room object / Record player",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+      "localPath": "assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+      "source": "https://polyhaven.com/a/cassette_player",
+      "status": "proxy"
+    },
+    {
+      "name": "Television_01_1k.gltf",
+      "type": "model",
+      "role": "room object / CRT TV",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+      "localPath": "assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+      "source": "https://polyhaven.com/a/Television_01",
+      "status": "downloaded"
+    },
+    {
+      "name": "vintage_telephone_wall_clock_1k.gltf",
+      "type": "model",
+      "role": "room object / Phone",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+      "localPath": "assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+      "source": "https://polyhaven.com/a/vintage_telephone_wall_clock",
+      "status": "proxy"
+    },
+    {
+      "name": "boombox_1k.gltf",
+      "type": "model",
+      "role": "room object / Vinyl shelf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+      "localPath": "assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+      "source": "https://polyhaven.com/a/boombox",
+      "status": "proxy"
+    },
+    {
+      "name": "cardboard_box_01_1k.gltf",
+      "type": "model",
+      "role": "room object / Cardboard merch box",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+      "localPath": "assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+      "source": "https://polyhaven.com/a/cardboard_box_01",
+      "status": "downloaded"
+    }
+  ]
+}

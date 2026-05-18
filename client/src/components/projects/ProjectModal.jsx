@@ -1,6 +1,7 @@
 import React from 'react';
-import { ExternalLink, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import Card from '../layout/Card';
+import CaseStudyShell from './CaseStudyShell';
 
 const evidenceLabels = {
   archive: 'Archive',
@@ -11,12 +12,39 @@ const evidenceLabels = {
   figma: 'Figma',
   pdf: 'PDF',
   prototype: 'Prototype',
-  'asset-pipeline': 'Asset Pipeline'
+  'asset-pipeline': 'Asset Pipeline',
+  'visual-direction-bible': 'Visual Direction Bible',
+  'motion-prototype': 'Motion Prototype',
+  'fallback-poster-mode': 'Fallback Poster Mode',
+  'look-dev-asset-pipeline': 'Look-dev Asset Pipeline',
+  'pdf-bible': 'PDF Bible'
 };
 
 const ProjectModal = ({ project, onClose }) => {
   if (!project) return null;
 
+  // Case-study layout
+  if (project.layout === 'case-study') {
+    return (
+      <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 overflow-y-auto">
+        <div className="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-black shadow-2xl my-8">
+          <button
+            onClick={onClose}
+            aria-label="Close case study"
+            className="sticky top-4 right-4 z-20 float-right w-10 h-10 rounded-full bg-black/70 border border-white/10 text-white hover:bg-white hover:text-black transition-colors flex items-center justify-center"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          <div className="p-6 md:p-10">
+            <CaseStudyShell project={project} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Simple modal layout (default)
   return (
     <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4">
       <div className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10 bg-black shadow-2xl">
@@ -109,7 +137,7 @@ const ProjectModal = ({ project, onClose }) => {
                       className="inline-flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition-colors hover:bg-white/10"
                     >
                       <span>{link.label}</span>
-                      <ExternalLink className="h-4 w-4 text-gray-300" />
+                      <span className="text-gray-300">↗</span>
                     </a>
                   ))}
                 </div>

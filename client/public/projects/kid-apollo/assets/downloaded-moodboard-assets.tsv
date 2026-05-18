@@ -1,0 +1,16 @@
+asset	role	license	source_url	served_folder	status
+Kenney Space Kit	Space blockout, launchpad parts, toy-space geometry	CC0	https://kenney.nl/projects/kid-apollo/assets/space-kit	/projects/kid-apollo/assets/references/space/kenney-space-kit	downloaded-unpacked
+Kenney Space Station Kit	Porthole, modular structure, space-interior blockout only	CC0	https://kenney.nl/projects/kid-apollo/assets/space-station-kit	/projects/kid-apollo/assets/references/space/kenney-space-station-kit	downloaded-unpacked
+Kenney Modular Space Kit	Modular space geometry for quick scene tests	CC0	https://kenney.nl/projects/kid-apollo/assets/modular-space-kit	/projects/kid-apollo/assets/references/space/kenney-modular-space-kit	downloaded-unpacked
+Kenney Furniture Kit	Room blockout furniture, shelves, tables, chairs, scale props	CC0	https://kenney.nl/projects/kid-apollo/assets/furniture-kit	/projects/kid-apollo/assets/room/kenney-furniture-kit	downloaded-unpacked
+Kenney Building Kit	Room shell, floor/wall massing, launchpad blockout	CC0	https://kenney.nl/projects/kid-apollo/assets/building-kit	/projects/kid-apollo/assets/room/kenney-building-kit	downloaded-unpacked
+Kenney Smoke Particles	Launch smoke, vapour puffs, fireball support sprites	CC0	https://kenney.nl/projects/kid-apollo/assets/smoke-particles	/projects/kid-apollo/assets/animations/kenney-smoke-particles	downloaded-unpacked
+Kenney Particle Pack	Glow textures, sparks, light cookies, fire/smoke atoms	CC0	https://kenney.nl/projects/kid-apollo/assets/particle-pack	/projects/kid-apollo/assets/animations/kenney-particle-pack	failed-direct-download
+OpenGameArt Animated Flame Sprite Sheet	Rocket flame timing reference, not final art direction	CC0	https://opengameart.org/content/animated-flame-fire-sprite-sheet	/projects/kid-apollo/assets/animations/opengameart-fire-sprite-sheet	downloaded-unpacked
+OpenGameArt Kenney Particle Pack Mirror	Backup particle sprites, light cookies, shader sprites	CC0	https://opengameart.org/content/particle-pack-80-sprites	/projects/kid-apollo/assets/animations/opengameart-kenney-particle-pack	downloaded-unpacked
+Kenney Sci-fi Sounds	Temporary engine, space, interface, impact, repair sound atoms	CC0	https://kenney.nl/projects/kid-apollo/assets/sci-fi-sounds	/projects/kid-apollo/assets/sounds/kenney-sci-fi-sounds	downloaded-unpacked
+ambientCG Metal009	Chrome/brushed metal base for rocket material studies	CC0	https://ambientcg.com/view?id=Metal009	/projects/kid-apollo/assets/references/materials/ambientcg-metal009	downloaded-unpacked
+ambientCG PaintedMetal009	Apollo-red painted metal base	CC0	https://ambientcg.com/view?id=PaintedMetal009	/projects/kid-apollo/assets/references/materials/ambientcg-paintedmetal009	downloaded-unpacked
+ambientCG Fabric016	Felt/wool proxy for goat material studies	CC0	https://ambientcg.com/view?id=Fabric016	/projects/kid-apollo/assets/references/materials/ambientcg-fabric016	downloaded-unpacked
+ambientCG CardboardSet001	Merch box, packaging, rough paper surface	CC0	https://ambientcg.com/view?id=CardboardSet001	/projects/kid-apollo/assets/references/materials/ambientcg-cardboardset001	downloaded-unpacked
+ambientCG Paper001	Labels, stickers, envelope, poster surface	CC0	https://ambientcg.com/view?id=Paper001	/projects/kid-apollo/assets/references/materials/ambientcg-paper001	downloaded-unpacked

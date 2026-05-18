@@ -107,21 +107,43 @@ export const projects = [
   {
     id: 'kid-apollo',
     fileCode: 'FILE_05',
+    layout: 'case-study',
     title: 'Kid Apollo Living Visual Direction Bible',
     subtitle: 'KID APOLLO',
     type: 'Production Direction / WebGL Prototype',
-    status: 'Case study pending integration',
+    status: 'In development',
     year: 2025,
     cover: null,
     summary:
       'Production-direction bible and interactive prototype for a music-world website built around a rocket, porthole transition, companion character, and room-object navigation.',
     longDescription:
-      'A placeholder entry for Kid Apollo that is ready for full case-study integration. The archive model supports embedded visual bible content, motion prototype demos, PDF downloads, and asset pipeline documentation once production files are available.\n\nThe current dataset stores the project structure so this item can be upgraded to a full case study without changing the core archive workflow.',
-    tags: ['React', 'Three.js', 'GSAP', 'Art Direction', 'Production Direction'],
-    role: 'Production direction, visual bible curation, web prototype planning',
-    stack: ['React', 'Three.js', 'GSAP', 'Creative Direction'],
-    links: [],
-    evidence: ['moodboard', 'prototype', 'asset-pipeline', 'pdf'],
-    ctaLabel: 'Preview Placeholder'
+      'Kid Apollo is a music-world web experience built around a cohesive visual language: a rocket as the primary navigation hub, porthole transitions between scenes, a companion character guide, and room-based object interactions.\n\nThe visual direction bible captures the aesthetic system, interaction patterns, motion language, and asset hierarchy. This case-study entry preserves the full development context, from concept exploration to prototype refinement, ready for future animation and asset pipeline integration.\n\nThe project demonstrates how to structure immersive web experiences through visual consistency, hierarchical interaction design, and character-driven navigation.',
+    tags: ['React', 'Three.js', 'GSAP', 'Art Direction', 'Production Direction', 'WebGL'],
+    role: 'Creative direction, visual system design, web prototype architecture, interaction design',
+    stack: ['React', 'Three.js', 'GSAP', 'Figma', 'Blender', 'WebGL'],
+    links: [
+      {
+        label: 'Open Visual Bible',
+        href: '/projects/kid-apollo/index.html',
+        external: false
+      }
+    ],
+    demo: {
+      type: 'iframe',
+      label: 'Open Living Visual Direction Bible',
+      src: '/projects/kid-apollo/index.html',
+      height: 720
+    },
+    evidence: [
+      'visual-direction-bible',
+      'motion-prototype',
+      'fallback-poster-mode',
+      'look-dev-asset-pipeline',
+      'pdf-bible'
+    ],
+    processNotes:
+      'The visual direction bible serves as the single source of truth for the project. All interactions, transitions, and asset creation follow this documented system. The motion prototype demonstrates the porthole transition mechanic and character behavior loops.',
+    showDemo: false,
+    ctaLabel: 'View Case Study'
   }
 ];

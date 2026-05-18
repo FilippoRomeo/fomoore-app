@@ -1,0 +1,101 @@
+# Kid Apollo moodboard selected assets
+
+Tight client-facing shortlist. Full library remains in /projects/kid-apollo/assets/moodboard/catalog.json. Wide backup remains in /projects/kid-apollo/assets/moodboard-selected/selection-wide.json.
+
+Generated: 2026-05-17T17:31:30.506Z
+Count: 94
+
+- chrome rocket body / image: `/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_color.jpg`
+- chrome rocket body / image: `/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_metalness.jpg`
+- chrome rocket body / image: `/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_normalgl.jpg`
+- chrome rocket body / image: `/projects/kid-apollo/assets/moodboard/materials/chrome/metal009_1k-jpg_roughness.jpg`
+- apollo red metal / image: `/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_color.jpg`
+- apollo red metal / image: `/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_metalness.jpg`
+- apollo red metal / image: `/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_normalgl.jpg`
+- apollo red metal / image: `/projects/kid-apollo/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_roughness.jpg`
+- brass porthole / image: `/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Color.jpg`
+- brass porthole / image: `/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Metalness.jpg`
+- brass porthole / image: `/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_NormalGL.jpg`
+- brass porthole / image: `/projects/kid-apollo/assets/moodboard/materials/brass-metal/Metal008_1K-JPG_Roughness.jpg`
+- goat fabric / image: `/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_color.jpg`
+- goat fabric / image: `/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_normalgl.jpg`
+- goat fabric / image: `/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_opacity.jpg`
+- goat fabric / image: `/projects/kid-apollo/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_roughness.jpg`
+- paper labels / image: `/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_color.jpg`
+- paper labels / image: `/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_normalgl.jpg`
+- paper labels / image: `/projects/kid-apollo/assets/moodboard/materials/paper-labels/paper001_1k-jpg_roughness.jpg`
+- cardboard merch / image: `/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_color.jpg`
+- cardboard merch / image: `/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_normalgl.jpg`
+- cardboard merch / image: `/projects/kid-apollo/assets/moodboard/materials/cardboard/cardboardset001_1k-jpg_roughness.jpg`
+- launchpad concrete / image: `/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Color.jpg`
+- launchpad concrete / image: `/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_NormalGL.jpg`
+- launchpad concrete / image: `/projects/kid-apollo/assets/moodboard/materials/launch-pad-concrete/Road007_1K-JPG_Roughness.jpg`
+- painted room wall / image: `/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Color.jpg`
+- painted room wall / image: `/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_NormalGL.jpg`
+- painted room wall / image: `/projects/kid-apollo/assets/moodboard/materials/painted-plaster/PaintedPlaster017_1K-JPG_Roughness.jpg`
+- warm room wood / image: `/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Color.jpg`
+- warm room wood / image: `/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_NormalGL.jpg`
+- warm room wood / image: `/projects/kid-apollo/assets/moodboard/materials/warm-wood-floor/WoodFloor040_1K-JPG_Roughness.jpg`
+- warm room wood / image: `/projects/kid-apollo/assets/moodboard/materials/wood-floor-alt/WoodFloor021_1K-JPG_Color.jpg`
+- rubber joints / image: `/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Color.jpg`
+- rubber joints / image: `/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_NormalGL.jpg`
+- rubber joints / image: `/projects/kid-apollo/assets/moodboard/materials/scuffed-rubber/Rubber004_1K-JPG_Roughness.jpg`
+- vinyl plastic / image: `/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Color.jpg`
+- vinyl plastic / image: `/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_NormalGL.jpg`
+- vinyl plastic / image: `/projects/kid-apollo/assets/moodboard/materials/vinyl-plastic/Plastic010_1K-JPG_Roughness.jpg`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/border.glb`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/column.glb`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/floor.glb`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/wall-corner.glb`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/wall-window-round.glb`
+- room blockout / model: `/projects/kid-apollo/assets/moodboard/models/room/wall.glb`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0001.png`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0008.png`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0016.png`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/fireb0024.png`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/firesheet.png`
+- rocket fire / image: `/projects/kid-apollo/assets/moodboard/sprites/fire/firesheet5x5.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/explosion00.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/flash00.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/flash04.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff00.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff04.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff08.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff12.png`
+- launch smoke / image: `/projects/kid-apollo/assets/moodboard/sprites/smoke/whitepuff16.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_001.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_002.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_003.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_004.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_005.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_006.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_007.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_008.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_009.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_010.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_011.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_012.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_013.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_014.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_015.png`
+- space sprites / image: `/projects/kid-apollo/assets/moodboard/sprites/space/kenney-space-shooter-extension/PNG/Sprites X2/Astronauts/spaceAstronauts_016.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/fire_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/flame_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/flare_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/light_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/scorch_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/smoke_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/spark_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/spark_03.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/star_01.png`
+- particle accents / image: `/projects/kid-apollo/assets/moodboard/sprites/particles/star_04.png`
+- engine tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceengine_000.ogg`
+- engine tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginelarge_000.ogg`
+- engine tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginelow_000.ogg`
+- engine tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/spaceenginesmall_000.ogg`
+- thruster tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_000.ogg`
+- thruster tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_001.ogg`
+- thruster tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/thrusterfire_002.ogg`
+- impact tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_000.ogg`
+- impact tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_001.ogg`
+- impact tests / sound: `/projects/kid-apollo/assets/moodboard/sounds/sci-fi/impactmetal_002.ogg`

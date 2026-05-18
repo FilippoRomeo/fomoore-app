@@ -1,0 +1,358 @@
+{
+  "generatedAt": "2026-05-17T21:38:50.206Z",
+  "status": "lookdev",
+  "note": "Temporary room object look-dev assets. Final room composition and final navigation objects remain custom/approved production assets.",
+  "objects": [
+    {
+      "id": "record-player",
+      "label": "Record player",
+      "action": "Listen",
+      "hrefKey": "listen",
+      "asset": "cassette_player",
+      "role": "listen proxy",
+      "status": "proxy",
+      "note": "Terminal-downloadable music-object proxy. Replace with actual record player / turntable when sourced or modelled.",
+      "sourcePage": "https://polyhaven.com/a/cassette_player",
+      "assetType": "model/gltf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+      "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+      "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+      "downloadedFiles": [
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_1k.gltf",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/cassette_player/cassette_player_1k.gltf"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_orangeblue_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_orangeblue_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_orangeblue_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_orangeblue_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_orangeblue_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_orangeblue_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player.bin",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player.bin",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/cassette_player/cassette_player.bin"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_body_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_body_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_body_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/textures/cassette_player_tape_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/record-player/cassette_player_tape_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cassette_player/cassette_player_tape_nor_gl_1k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "crt-tv",
+      "label": "CRT TV",
+      "action": "Watch",
+      "hrefKey": "watch",
+      "asset": "Television_01",
+      "role": "watch object",
+      "status": "downloaded",
+      "note": "Vintage tabletop CRT TV look-dev object.",
+      "sourcePage": "https://polyhaven.com/a/Television_01",
+      "assetType": "model/gltf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+      "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+      "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+      "downloadedFiles": [
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_1k.gltf",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Television_01/Television_01_1k.gltf"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01.bin",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01.bin",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Television_01/Television_01.bin"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/textures/Television_01_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/crt-tv/Television_01_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Television_01/Television_01_nor_gl_1k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "label": "Phone",
+      "action": "Follow",
+      "hrefKey": "instagram",
+      "asset": "vintage_telephone_wall_clock",
+      "role": "follow proxy",
+      "status": "proxy",
+      "note": "Terminal-downloadable phone-like proxy. Replace with stylised smartphone / social phone object later.",
+      "sourcePage": "https://polyhaven.com/a/vintage_telephone_wall_clock",
+      "assetType": "model/gltf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+      "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+      "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+      "downloadedFiles": [
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_1k.gltf",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_1k.gltf"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/textures/vintage_telephone_wall_clock_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_telephone_wall_clock/vintage_telephone_wall_clock_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock.bin",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/phone/vintage_telephone_wall_clock.bin",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_telephone_wall_clock/vintage_telephone_wall_clock.bin"
+        }
+      ]
+    },
+    {
+      "id": "envelope-poster",
+      "label": "Envelope / poster",
+      "action": "Sign Up",
+      "hrefKey": "signup",
+      "asset": null,
+      "role": "signup object",
+      "status": "manual-needed",
+      "note": "No good direct-download CC0 envelope/poster model found for this pass. Use a simple custom plane/poster in Three.js or source manually.",
+      "sourcePage": null,
+      "assetType": "manual",
+      "url": null,
+      "localPath": null,
+      "servedPath": null,
+      "downloadedFiles": []
+    },
+    {
+      "id": "vinyl-shelf",
+      "label": "Vinyl shelf",
+      "action": "Vinyl",
+      "hrefKey": "vinyl",
+      "asset": "boombox",
+      "role": "vinyl/music proxy",
+      "status": "proxy",
+      "note": "Terminal-downloadable music-room proxy. Replace with actual vinyl shelf / record crate later.",
+      "sourcePage": "https://polyhaven.com/a/boombox",
+      "assetType": "model/gltf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+      "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+      "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+      "downloadedFiles": [
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_1k.gltf",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/boombox/boombox_1k.gltf"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_speakers_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_speakers_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_speakers_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_speakers_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_speakers_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_speakers_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox.bin",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox.bin",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/boombox/boombox.bin"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_speakers_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_speakers_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_speakers_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_speakers_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_speakers_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_speakers_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/textures/boombox_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/vinyl-shelf/boombox_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/boombox/boombox_arm_1k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "merch-box",
+      "label": "Cardboard merch box",
+      "action": "Merch Soon",
+      "hrefKey": "merch",
+      "asset": "cardboard_box_01",
+      "role": "merch object",
+      "status": "downloaded",
+      "note": "Cardboard box object for merch-soon placeholder.",
+      "sourcePage": "https://polyhaven.com/a/cardboard_box_01",
+      "assetType": "model/gltf",
+      "url": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+      "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+      "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+      "downloadedFiles": [
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_1k.gltf",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/cardboard_box_01/cardboard_box_01_1k.gltf"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_arm_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_arm_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_arm_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01.bin",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01.bin",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/cardboard_box_01/cardboard_box_01.bin"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_diff_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_diff_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_diff_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/textures/cardboard_box_01_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_nor_gl_1k.jpg"
+        },
+        {
+          "localPath": "public/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_nor_gl_1k.jpg",
+          "servedPath": "/projects/kid-apollo/assets/final-art/_lookdev-inputs/room-objects/merch-box/cardboard_box_01_nor_gl_1k.jpg",
+          "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/cardboard_box_01/cardboard_box_01_nor_gl_1k.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "Kid Apollo Final Art Pack Contract",
+  "status": "staging",
+  "servedBasePath": "/projects/kid-apollo/assets/final-art",
+  "importantBoundary": "This folder is for commissioned or approved final assets. The _lookdev-inputs folder contains temporary sourced material only.",
+  "requiredDeliverables": [
+    {
+      "id": "rocket-final-glb",
+      "label": "Custom rocket GLB",
+      "targetPath": "/projects/kid-apollo/assets/final-art/rocket/glb/kid-apollo-rocket.final.glb",
+      "status": "todo",
+      "notes": "Compact chrome toy rocket, Apollo-red fins, large amber porthole, brass ring, decals, light wear."
+    },
+    {
+      "id": "goat-final-glb",
+      "label": "Custom goat GLB",
+      "targetPath": "/projects/kid-apollo/assets/final-art/goat/glb/kid-apollo-goat.final.glb",
+      "status": "todo",
+      "notes": "Small felted baby goat, off-white wool, bent ear, KA patch, protective glasses variant."
+    },
+    {
+      "id": "goat-animation-set",
+      "label": "Goat animation clips",
+      "targetPath": "/projects/kid-apollo/assets/final-art/goat/animations/",
+      "status": "todo",
+      "clips": [
+        "scramble",
+        "cling-loop",
+        "porthole-peek-wave",
+        "idle-roam",
+        "repair-hammer",
+        "repair-welder",
+        "repair-wrench",
+        "pfff",
+        "thumbs-up"
+      ]
+    },
+    {
+      "id": "room-blockout-final",
+      "label": "Custom room blockout",
+      "targetPath": "/projects/kid-apollo/assets/final-art/room/glb/kid-apollo-room.blockout.glb",
+      "status": "todo",
+      "notes": "Warm cutaway music-room layout with six link-object positions."
+    },
+    {
+      "id": "decals-final",
+      "label": "Custom decals",
+      "targetPath": "/projects/kid-apollo/assets/final-art/decals/",
+      "status": "todo",
+      "items": [
+        "KA monogram",
+        "SIDE A label",
+        "music note sticker",
+        "tour/release decal",
+        "repair patch",
+        "tape label",
+        "SOON merch label"
+      ]
+    },
+    {
+      "id": "poster-still-final",
+      "label": "Custom poster still",
+      "targetPath": "/projects/kid-apollo/assets/final-art/poster/exports/kid-apollo-poster-mode.webp",
+      "status": "todo",
+      "notes": "Polished still of the real world: rocket, goat, glowing porthole, physical labels, Listen primary."
+    },
+    {
+      "id": "optimised-glb-exports",
+      "label": "Optimised GLB exports",
+      "targetPath": "/projects/kid-apollo/assets/final-art/exports/glb-optimised/",
+      "status": "todo",
+      "notes": "Final compressed/optimised GLBs for production testing."
+    },
+    {
+      "id": "compressed-textures",
+      "label": "Compressed textures",
+      "targetPath": "/projects/kid-apollo/assets/final-art/exports/textures-compressed/",
+      "status": "todo",
+      "notes": "Compressed final texture set for mobile performance."
+    },
+    {
+      "id": "final-sfx-pass",
+      "label": "Final SFX pass",
+      "targetPath": "/projects/kid-apollo/assets/final-art/sfx/",
+      "status": "todo",
+      "items": [
+        "engine rumble",
+        "ignition",
+        "thruster fire loop",
+        "porthole tap",
+        "room reveal swell",
+        "asteroid impact",
+        "goat pfff",
+        "hammer",
+        "welder",
+        "wrench",
+        "repair complete",
+        "room ambience"
+      ]
+    }
+  ]
+}
