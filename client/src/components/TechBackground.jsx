@@ -1,107 +1,171 @@
 import React, { useRef, useMemo, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Plane } from '@react-three/drei';
 import * as THREE from 'three';
 
 const Terrain = () => {
-    const meshRef = useRef();
+    const lineRef = useRef();
     const { mouse, viewport } = useThree();
+    const tempColor = useMemo(() => new THREE.Color(), []);
 
-    // Generate initial vertices
-    const { geometry, initialPositions, colors } = useMemo(() => {
+    const { positions, colors, meta, totalVertices } = useMemo(() => {
         const size = 128;
         const segments = 64;
-        const geo = new THREE.PlaneGeometry(size, size, segments, segments);
-        const count = geo.attributes.position.count;
-        const pos = geo.attributes.position;
-        const initialPos = new Float32Array(count * 3);
-        const cols = new Float32Array(count * 3);
+        const step = size / segments;
+        const half = size / 2;
 
-        for (let i = 0; i < count; i++) {
-            const x = pos.getX(i);
-            const y = pos.getY(i);
-            const z = Math.sin(x * 0.1) * Math.cos(y * 0.1) * 2 + Math.random() * 0.5;
+        const lineCount = (segments + 1) * segments * 2;
+        const totalVertices = lineCount * 2;
 
-            pos.setZ(i, z);
-            initialPos[i * 3] = x;
-            initialPos[i * 3 + 1] = y;
-            initialPos[i * 3 + 2] = z; // Store initial Z
+        const positions = new Float32Array(totalVertices * 3);
+        const colors = new Float32Array(totalVertices * 3);
+        const meta = [];
 
-            // Color
-            const color = new THREE.Color();
-            if (z > 1) color.set('#22c55e');
-            else if (z < -1) color.set('#ef4444');
-            else color.set('#afe90eff');
+        let ptr = 0;
 
-            cols[i * 3] = color.r;
-            cols[i * 3 + 1] = color.g;
-            cols[i * 3 + 2] = color.b;
+        const pushSegment = (x1, y1, x2, y2, stringId, direction) => {
+            positions[ptr * 3] = x1;
+            positions[ptr * 3 + 1] = y1;
+            positions[ptr * 3 + 2] = 0;
+
+            colors[ptr * 3] = 1;
+            colors[ptr * 3 + 1] = 1;
+            colors[ptr * 3 + 2] = 1;
+
+            meta.push({ x: x1, y: y1, stringId, direction });
+            ptr++;
+
+            positions[ptr * 3] = x2;
+            positions[ptr * 3 + 1] = y2;
+            positions[ptr * 3 + 2] = 0;
+
+            colors[ptr * 3] = 1;
+            colors[ptr * 3 + 1] = 1;
+            colors[ptr * 3 + 2] = 1;
+
+            meta.push({ x: x2, y: y2, stringId, direction });
+            ptr++;
+        };
+
+        // Horizontal strings
+        for (let row = 0; row <= segments; row++) {
+            const y = -half + row * step;
+
+            for (let col = 0; col < segments; col++) {
+                const x1 = -half + col * step;
+                const x2 = x1 + step;
+
+                pushSegment(x1, y, x2, y, row, "horizontal");
+            }
         }
 
-        geo.setAttribute('color', new THREE.BufferAttribute(cols, 3));
-        return { geometry: geo, initialPositions: initialPos, colors: cols };
+        // Vertical strings
+        for (let col = 0; col <= segments; col++) {
+            const x = -half + col * step;
+
+            for (let row = 0; row < segments; row++) {
+                const y1 = -half + row * step;
+                const y2 = y1 + step;
+
+                pushSegment(x, y1, x, y2, col + 1000, "vertical");
+            }
+        }
+
+        return { positions, colors, meta, totalVertices };
     }, []);
 
     useFrame((state) => {
-        if (!meshRef.current) return;
+        if (!lineRef.current) return;
 
         const time = state.clock.elapsedTime;
-        const pos = meshRef.current.geometry.attributes.position;
-        const count = pos.count;
 
-        // Mouse interaction
-        // Convert mouse screen coords (-1 to 1) to world coords roughly
+        // lineRef.current.rotation.x = -Math.PI / 2;
+        // lineRef.current.rotation.z = Math.sin(time * 0.12) * 0.08;
+        // lineRef.current.rotation.y = time * 0.03;
+        lineRef.current.rotation.x = -Math.PI / 2;
+lineRef.current.rotation.y = Math.sin(time * 0.18) * 0.18;
+lineRef.current.rotation.z = time * 0.035;
+        const geometry = lineRef.current.geometry;
+        const posAttr = geometry.attributes.position;
+        const colorAttr = geometry.attributes.color;
+
         const mouseX = (mouse.x * viewport.width) / 2;
         const mouseY = (mouse.y * viewport.height) / 2;
 
-        for (let i = 0; i < count; i++) {
-            const x = initialPositions[i * 3];
-            const y = initialPositions[i * 3 + 1];
-            const initialZ = initialPositions[i * 3 + 2];
+        for (let i = 0; i < totalVertices; i++) {
+            const { x, y, stringId, direction } = meta[i];
 
-            // Distance to mouse (projected on plane)
-            // We need to account for the mesh rotation (-Math.PI/2 on X)
-            // The mesh X is World X. The mesh Y is World -Z.
-            // So we compare Mesh X with Mouse X, and Mesh Y with Mouse Y (roughly, since camera is tilted/positioned)
-
-            const dx = x - mouseX * 20; // Scale factor for mouse influence area
+            const dx = x - mouseX * 20;
             const dy = y - mouseY * 20;
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            // Multiple wave patterns for organic movement
-            let z = initialZ;
-            z += Math.sin(x * 0.15 + time * 2) * 0.8; // Wave 1
-            z += Math.cos(y * 0.15 + time * 1.5) * 0.8; // Wave 2
-            z += Math.sin((x + y) * 1 + time * 3) * 0.5; // Diagonal wave
-            z += Math.sin(Math.sqrt(x * x + y * y) * 0.1 - time * 2) * 0.4;
-            z += Math.sin(Math.sqrt(x * x + y * y) * 0.1 - time * 2) * 0.6; // Radial wave
+            let z = Math.sin(x * 0.1) * Math.cos(y * 0.1) * 2;
+
+            z += Math.sin(x * 0.15 + time * 2) * 0.8;
+            z += Math.cos(y * 0.15 + time * 1.5) * 0.8;
+            z += Math.sin((x + y) * 0.4 + time * 3) * 0.5;
             z += Math.sin(Math.sqrt(x * x + y * y) * 0.1 - time * 2) * 0.8;
-            // Mouse interaction: Ripple/Push
+
             if (dist < 15) {
                 const force = (15 - dist) / 15;
-                z += Math.sin(dist * 0.5 - time * 5) * force * 5; // Ripple
+                z += Math.sin(dist * 0.5 - time * 5) * force * 5;
             }
 
-            pos.setZ(i, z);
+            const twistAmount = Math.sin(time * 0.5) * 0.8;
+            const twist = y * 0.015 * twistAmount;
+
+            const cosT = Math.cos(twist);
+            const sinT = Math.sin(twist);
+
+            const twistedX = x * cosT - z * sinT;
+            const twistedZ = x * sinT + z * cosT;
+
+            posAttr.setX(i, twistedX);
+            posAttr.setY(i, y);
+            posAttr.setZ(i, twistedZ);
+
+            const stringOffset = stringId * 0.017;
+            const directionalOffset = direction === "horizontal" ? 0 : 0.18;
+
+            const hue =
+                (
+                    time * 0.035 +
+                    stringOffset +
+                    directionalOffset +
+                    Math.sin(time * 0.5 + stringId * 0.2) * 0.04
+                ) % 1;
+
+            tempColor.setHSL(hue, 0.9, 0.55);
+
+            colorAttr.setXYZ(i, tempColor.r, tempColor.g, tempColor.b);
         }
 
-        pos.needsUpdate = true;
-
-        // Keep mesh position FIXED - no forward movement
-        // meshRef.current.position stays at [0, 0, -10]
+        posAttr.needsUpdate = true;
+        colorAttr.needsUpdate = true;
     });
 
     return (
-        <mesh ref={meshRef} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -10]}>
-            <primitive object={geometry} attach="geometry" />
-            <meshBasicMaterial
+        <lineSegments ref={lineRef} position={[0, 0, -10]}>
+            <bufferGeometry>
+                <bufferAttribute
+                    attach="attributes-position"
+                    count={totalVertices}
+                    array={positions}
+                    itemSize={3}
+                />
+                <bufferAttribute
+                    attach="attributes-color"
+                    count={totalVertices}
+                    array={colors}
+                    itemSize={3}
+                />
+            </bufferGeometry>
+
+            <lineBasicMaterial
                 vertexColors
-                wireframe
                 transparent
-                opacity={0.6}
-                side={THREE.DoubleSide}
+                opacity={0.7}
             />
-        </mesh>
+        </lineSegments>
     );
 };
 
@@ -119,10 +183,15 @@ const Particles = () => {
         return pos;
     });
 
-    useFrame((state) => {
+        useFrame((state) => {
         if (!mesh.current) return;
-        mesh.current.rotation.y = state.clock.elapsedTime * 0.05;
-        mesh.current.rotation.z = state.clock.elapsedTime * 0.02;
+
+        const time = state.clock.elapsedTime;
+
+        mesh.current.rotation.y = time * 0.05;
+        mesh.current.rotation.z = time * 0.02;
+
+        mesh.current.material.color.setHSL((time * 0.05) % 1, 0.9, 0.55);
     });
 
     return (
