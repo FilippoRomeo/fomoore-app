@@ -47,7 +47,7 @@ const evidenceConfig = {
     color: 'border-cyan-500/30'
   },
   'visual-direction-bible': {
-    label: 'Visual Direction Bible',
+    label: 'Visual Direction',
     icon: '📘',
     color: 'border-sky-500/30'
   },

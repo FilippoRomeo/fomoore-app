@@ -2,9 +2,9 @@ export const projects = [
   {
     id: 'skinsuit',
     fileCode: 'FILE_01',
-    title: '3D Web E-Commerce Experience',
+    title: 'Skinsuit',
     subtitle: 'SKINSUIT',
-    type: '3D Web Experience',
+    type: '3D Web E-Commerce Experience',
     category: 'WebGL',
     status: 'Archived',
     year: 2024,
@@ -51,11 +51,11 @@ export const projects = [
       embedSrc: 'https://www.youtube.com/embed/f-IxzqylGVI'
     },
     summary:
-      'Experimental video art exploring glitched misbeliefs through personal recordings and movie scenes.',
+      'Video art exploring glitched misbeliefs through personal recordings and movie scenes.',
     longDescription:
       'A story-driven video sampling experiment that reinterprets personal recordings and cinematic fragments to examine delusion, change, and visual memory. The piece uses editing, visual modulation, and narrative pacing as its primary interface.\n\nThe work exists as an experimental art direction project rather than a product release, making it a strong example of how media artifacts can be archived in the system.',
-    tags: ['Video Art', 'Sampling', 'Experimental Media', 'Creative Direction'],
-    role: 'Creative direction, video editing, experimental media design',
+    tags: ['Video Art', 'Sampling', 'Media', 'Creative Direction'],
+    role: 'Creative direction, video editing, media design',
     stack: ['Video Editing', 'Creative Coding', 'Art Direction'],
     links: [
       {
@@ -137,7 +137,7 @@ export const projects = [
   {
     id: 'kid-apollo',
     fileCode: 'FILE_05',
-    title: 'Kid Apollo Living Visual Direction Bible',
+    title: 'Kid Apollo',
     subtitle: 'KID APOLLO',
     type: '3D Web Experience',
     category: 'WebGL',
@@ -151,7 +151,7 @@ export const projects = [
       note: 'The Apollo live site will be linked here when published. Do not embed the visual direction bible inside the modal.'
     },
     summary:
-      'Production-direction bible and interactive prototype for a music-world website built around a rocket, porthole transition, companion character, and room-object navigation.',
+      'Art direction for a music-world website built around a rocket, porthole transition, companion character, and room-object navigation.',
     longDescription:
       'Kid Apollo is a music-world web experience built around a cohesive visual language: a rocket as the primary navigation hub, porthole transitions between scenes, a companion character guide, and room-based object interactions.\n\nThe visual direction bible captures the aesthetic system, interaction patterns, motion language, and asset hierarchy. This case-study entry preserves the full development context, from concept exploration to prototype refinement, ready for future animation and asset pipeline integration.\n\nThe project demonstrates how to structure immersive web experiences through visual consistency, hierarchical interaction design, and character-driven navigation.',
     tags: ['React', 'Three.js', 'GSAP', 'Art Direction', 'Production Direction', 'WebGL'],
