@@ -9,12 +9,9 @@ import {
   Radio
 } from 'lucide-react';
 import Brand3D from './components/Brand3D';
-import ThermalModel from './components/ThermalModel';
 import TechBackground from './components/TechBackground';
 import GlitchSeparator from './components/GlitchSeparator';
 import ScrollProgress from './components/ScrollProgress';
-import MNISTCanvas from './components/MNISTCanvas';
-import MNISTThermal from './components/MNISTThermal';
 import SectionTitle from './components/layout/SectionTitle';
 import Card from './components/layout/Card';
 import ProjectGrid from './components/projects/ProjectGrid';
@@ -109,9 +106,6 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bootSequence, setBootSequence] = useState(true);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
-  const [showMNIST, setShowMNIST] = useState(false);
-  const [mnistTrainingCount, setMnistTrainingCount] = useState(0);
-  const [mnistIsTraining, setMnistIsTraining] = useState(false);
   const selectedProject = projects.find((project) => project.id === selectedProjectId);
 
   useEffect(() => {
@@ -124,6 +118,18 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (selectedProjectId) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedProjectId]);
+
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -132,14 +138,10 @@ export default function App() {
 
   const openProject = (projectId) => {
     setSelectedProjectId(projectId);
-    if (projectId === 'mnist-classifier') {
-      setShowMNIST(true);
-    }
   };
 
   const closeProject = () => {
     setSelectedProjectId(null);
-    setShowMNIST(false);
   };
 
   if (bootSequence) {
@@ -326,7 +328,7 @@ export default function App() {
       {/* Experience Section */}
       <section id="experience" className="py-32 px-6 relative z-10 bg-white/[0.02]">
         <div className="container mx-auto max-w-5xl">
-          <SectionTitle id="002">Execution Modules</SectionTitle>
+          <SectionTitle id="002">Experiences</SectionTitle>
 
           <div className="space-y-6">
 
@@ -489,16 +491,8 @@ export default function App() {
         </div>
       </footer>
 
-      {selectedProject && selectedProject.id !== 'mnist-classifier' && (
+      {selectedProject && (
         <ProjectModal project={selectedProject} onClose={closeProject} />
-      )}
-
-      {showMNIST && selectedProject?.id === 'mnist-classifier' && (
-        <MNISTCanvas
-          onClose={closeProject}
-          onTrainingCountChange={setMnistTrainingCount}
-          onTrainingStatusChange={setMnistIsTraining}
-        />
       )}
     </div>
   );
