@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import MNISTCanvas from '../MNISTCanvas';
+import React, { Suspense, lazy, useState } from 'react';
 
 const liveComponents = {
-  mnist: MNISTCanvas
+  mnist: lazy(() => import('../MNISTCanvas'))
 };
 
 const PlaceholderBlock = ({ children, className = '' }) => (
@@ -11,7 +10,7 @@ const PlaceholderBlock = ({ children, className = '' }) => (
   </div>
 );
 
-const LaunchMNISTPanel = ({ project, onClose }) => {
+const LaunchMNISTPanel = ({ project }) => {
   const [isLaunched, setIsLaunched] = useState(false);
   const LiveComponent = liveComponents[project.live?.component];
 
@@ -39,22 +38,24 @@ const LaunchMNISTPanel = ({ project, onClose }) => {
 
       {/* TODO: Split MNISTCanvas into inline content and modal shell so this panel can render the classifier directly. */}
       {isLaunched && LiveComponent && (
-        <LiveComponent
-          onClose={() => setIsLaunched(false)}
-          onTrainingCountChange={() => {}}
-          onTrainingStatusChange={() => {}}
-        />
+        <Suspense fallback={null}>
+          <LiveComponent
+            onClose={() => setIsLaunched(false)}
+            onTrainingCountChange={() => {}}
+            onTrainingStatusChange={() => {}}
+          />
+        </Suspense>
       )}
     </>
   );
 };
 
-const ProjectLivePanel = ({ project, onClose }) => {
+const ProjectLivePanel = ({ project }) => {
   const live = project.live || {};
 
   if (live.mode === 'component') {
     if (live.component === 'mnist') {
-      return <LaunchMNISTPanel project={project} onClose={onClose} />;
+      return <LaunchMNISTPanel project={project} />;
     }
 
     return (

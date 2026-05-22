@@ -1,177 +1,322 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Environment, MeshDistortMaterial } from '@react-three/drei';
+import { MeshDistortMaterial, Sphere, TorusKnot, Icosahedron, Float, Environment } from '@react-three/drei';
 import * as THREE from 'three';
-import MNISTThermal from '../MNISTThermal';
 
-const SceneShell = ({ children }) => (
-  <Canvas camera={{ position: [0, 0, 3.8], fov: 50 }} style={{ width: '100%', height: '100%' }}>
-    <ambientLight intensity={0.5} />
-    <pointLight position={[3, 3, 3]} intensity={1} />
-    <pointLight position={[-3, -2, -2]} intensity={0.4} color="#C87820" />
-    {children}
-    <Environment preset="city" />
-  </Canvas>
+const ThermalObject = ({ geometry, colors }) => {
+  const meshRef = useRef();
+  const [glitchActive, setGlitchActive] = useState(false);
+  const [glitchIntensity, setGlitchIntensity] = useState(0);
+
+  useFrame((state) => {
+    if (!meshRef.current) return;
+    meshRef.current.rotation.x = state.clock.elapsedTime * 0.2;
+    meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+
+    const rotationPhase = (state.clock.elapsedTime * 0.3) % (Math.PI * 2);
+    const shouldGlitch = Math.sin(rotationPhase * 4) > 0.95;
+
+    if (shouldGlitch && !glitchActive) {
+      setGlitchActive(true);
+      setGlitchIntensity(Math.random());
+      setTimeout(() => setGlitchActive(false), 100 + Math.random() * 200);
+    }
+
+    if (glitchActive) {
+      meshRef.current.position.x = (Math.random() - 0.5) * 0.1 * glitchIntensity;
+      meshRef.current.position.y = (Math.random() - 0.5) * 0.1 * glitchIntensity;
+      meshRef.current.scale.setScalar(1 + (Math.random() - 0.5) * 0.1 * glitchIntensity);
+    } else {
+      meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, 0, 0.1);
+      meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, 0, 0.1);
+      meshRef.current.scale.setScalar(THREE.MathUtils.lerp(meshRef.current.scale.x, 1, 0.1));
+    }
+  });
+
+  const materialProps = {
+    color: colors.base,
+    emissive: colors.emissive,
+    emissiveIntensity: glitchActive ? 1.5 : 0.5,
+    roughness: 0.2,
+    metalness: 1,
+    distort: glitchActive ? colors.glitchDistort : colors.distort,
+    speed: glitchActive ? colors.glitchSpeed : colors.speed
+  };
+
+  return (
+    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+      {geometry === 'skinsuit' && (
+        <Icosahedron args={[1.2, 1]} ref={meshRef}>
+          <MeshDistortMaterial
+            {...materialProps}
+            color={glitchActive ? colors.glitchColor : colors.base}
+            emissive={glitchActive ? colors.glitchEmissive : colors.emissive}
+          />
+        </Icosahedron>
+      )}
+      {geometry === 'glitch-box' && (
+        <Icosahedron args={[1.2, 0]} ref={meshRef}>
+          <MeshDistortMaterial
+            {...materialProps}
+            color={glitchActive ? colors.glitchColor : colors.base}
+            emissive={glitchActive ? colors.glitchEmissive : colors.emissive}
+          />
+        </Icosahedron>
+      )}
+      {geometry === 'spray-orb' && (
+        <Sphere args={[1.2, 32, 32]} ref={meshRef}>
+          <MeshDistortMaterial
+            {...materialProps}
+            color={glitchActive ? colors.glitchColor : colors.base}
+            emissive={glitchActive ? colors.glitchEmissive : colors.emissive}
+          />
+        </Sphere>
+      )}
+      {geometry === 'mnist' && (
+        <TorusKnot args={[1, 0.3, 128, 16]} ref={meshRef}>
+          <MeshDistortMaterial
+            {...materialProps}
+            color={glitchActive ? colors.glitchColor : colors.base}
+            emissive={glitchActive ? colors.glitchEmissive : colors.emissive}
+          />
+        </TorusKnot>
+      )}
+      {geometry === 'apollo-rocket' && (
+        <TorusKnot args={[0.9, 0.35, 128, 16]} ref={meshRef}>
+          <MeshDistortMaterial
+            {...materialProps}
+            color={glitchActive ? colors.glitchColor : colors.base}
+            emissive={glitchActive ? colors.glitchEmissive : colors.emissive}
+          />
+        </TorusKnot>
+      )}
+    </Float>
+  );
+};
+
+const SkinSuitVisual = () => (
+  <div className="w-full h-full relative">
+    <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+      <ThermalObject
+        geometry="skinsuit"
+        colors={{
+          base: '#4f46e5',
+          emissive: '#f59e0b',
+          glitchColor: '#ff0000',
+          glitchEmissive: '#00ff00',
+          distort: 0.35,
+          glitchDistort: 0.9,
+          speed: 3,
+          glitchSpeed: 12
+        }}
+      />
+
+      <Environment preset="city" />
+    </Canvas>
+
+    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+  </div>
 );
 
-const ApolloRocket = () => {
-  const groupRef = useRef();
-
-  useFrame(({ clock }) => {
-    if (!groupRef.current) return;
-    groupRef.current.position.y = Math.sin(clock.elapsedTime * 0.6) * 0.08;
-    groupRef.current.rotation.y += 0.004;
-  });
-
-  return (
-    <Float speed={1.2} floatIntensity={0.3} rotationIntensity={0.15}>
-      <group ref={groupRef}>
-        <mesh>
-          <cylinderGeometry args={[0.28, 0.32, 1.4, 12]} />
-          <meshStandardMaterial color="#C8C0B2" roughness={0.45} metalness={0.2} />
-        </mesh>
-        <mesh position={[0, 0.98, 0]}>
-          <coneGeometry args={[0.28, 0.55, 12]} />
-          <meshStandardMaterial color="#7A1C1C" roughness={0.4} metalness={0.25} />
-        </mesh>
-        {[0, 1, 2].map((fin) => {
-          const angle = (fin / 3) * Math.PI * 2;
-          return (
-            <mesh
-              key={fin}
-              position={[Math.sin(angle) * 0.3, -0.58, Math.cos(angle) * 0.3]}
-              rotation={[0, angle, 0]}
-            >
-              <boxGeometry args={[0.12, 0.45, 0.24]} />
-              <meshStandardMaterial color="#7A1C1C" roughness={0.5} metalness={0.15} />
-            </mesh>
-          );
-        })}
-        <mesh position={[0, 0.25, 0.31]}>
-          <torusGeometry args={[0.13, 0.035, 8, 24]} />
-          <meshStandardMaterial color="#A8A4A0" roughness={0.25} metalness={0.55} />
-        </mesh>
-        <mesh position={[0, 0.25, 0.305]}>
-          <circleGeometry args={[0.12, 24]} />
-          <meshStandardMaterial color="#C87820" emissive="#C87820" emissiveIntensity={1.2} side={THREE.DoubleSide} />
-        </mesh>
-        <mesh position={[0, -0.72, 0]} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[0.16, 0.04, 8, 24]} />
-          <meshStandardMaterial color="#7A1C1C" roughness={0.4} metalness={0.2} />
-        </mesh>
-      </group>
-    </Float>
-  );
-};
-
-const DistortedMesh = ({ geometry, color, emissive, emissiveIntensity, distort, speed }) => {
-  const meshRef = useRef();
-
-  useFrame(() => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x += 0.004;
-    meshRef.current.rotation.y += 0.006;
-  });
-
-  return (
-    <Float speed={1.6} floatIntensity={0.35} rotationIntensity={0.2}>
-      <mesh ref={meshRef}>
-        {geometry}
-        <MeshDistortMaterial
-          color={color}
-          emissive={emissive}
-          emissiveIntensity={emissiveIntensity}
-          distort={distort}
-          speed={speed}
-          roughness={0.28}
-          metalness={0.45}
-        />
-      </mesh>
-    </Float>
-  );
-};
-
 const GlitchBox = () => (
-  <DistortedMesh
-    geometry={<icosahedronGeometry args={[1.1, 0]} />}
-    color="#ec4899"
-    emissive="#eab308"
-    emissiveIntensity={0.35}
-    distort={0.45}
-    speed={2}
-  />
+  <div className="w-full h-full relative">
+    <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+      <ThermalObject
+        geometry="glitch-box"
+        colors={{
+          base: '#ec4899',
+          emissive: '#eab308',
+          glitchColor: '#ffff00',
+          glitchEmissive: '#00ffff',
+          distort: 0.3,
+          glitchDistort: 0.9,
+          speed: 4,
+          glitchSpeed: 12
+        }}
+      />
+
+      <Environment preset="city" />
+    </Canvas>
+
+    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+  </div>
 );
 
 const SprayOrb = () => (
-  <DistortedMesh
-    geometry={<sphereGeometry args={[1.1, 32, 32]} />}
-    color="#8b5cf6"
-    emissive="#3b82f6"
-    emissiveIntensity={0.35}
-    distort={0.35}
-    speed={1.8}
-  />
+  <div className="w-full h-full relative">
+    <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+      <ThermalObject
+        geometry="spray-orb"
+        colors={{
+          base: '#8b5cf6',
+          emissive: '#3b82f6',
+          glitchColor: '#00ff00',
+          glitchEmissive: '#ff00ff',
+          distort: 0.6,
+          glitchDistort: 1.2,
+          speed: 2,
+          glitchSpeed: 8
+        }}
+      />
+
+      <Environment preset="city" />
+    </Canvas>
+
+    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+  </div>
 );
 
-const SkinSuitVisual = () => (
-  <DistortedMesh
-    geometry={<torusKnotGeometry args={[0.8, 0.28, 120, 16]} />}
-    color="#3b82f6"
-    emissive="#ef4444"
-    emissiveIntensity={0.25}
-    distort={0.4}
-    speed={2}
-  />
-);
+const MNISTVisual = () => {
+  const [currentDigit, setCurrentDigit] = useState('4');
 
-const FallbackVisual = () => {
-  const meshRef = useRef();
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDigit((digit) => {
+        let nextDigit = digit;
 
-  useFrame(() => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x += 0.004;
-    meshRef.current.rotation.y += 0.008;
-  });
+        while (nextDigit === digit) {
+          nextDigit = String(Math.floor(Math.random() * 10));
+        }
+
+        return nextDigit;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <mesh ref={meshRef}>
-      <icosahedronGeometry args={[1.05, 1]} />
-      <meshBasicMaterial color="#ffffff" wireframe transparent opacity={0.15} />
-    </mesh>
+    <div className="w-full h-full relative">
+      <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+        <ThermalObject
+          geometry="mnist"
+          colors={{
+            base: '#3b82f6',
+            emissive: '#ef4444',
+            glitchColor: '#ff0000',
+            glitchEmissive: '#00ff00',
+            distort: 0.4,
+            glitchDistort: 0.8,
+            speed: 2,
+            glitchSpeed: 8
+          }}
+        />
+
+        <Environment preset="city" />
+      </Canvas>
+
+      <div style={{
+        position: 'absolute', inset: 0, display: 'flex',
+        alignItems: 'center', justifyContent: 'center',
+        pointerEvents: 'none', zIndex: 10
+      }}>
+        <span style={{
+          fontFamily: 'monospace', fontSize: '5rem', fontWeight: 900,
+          color: '#22c55e', opacity: 0.18, lineHeight: 1,
+          textShadow: '0 0 30px #22c55e',
+          userSelect: 'none'
+        }}>
+          {currentDigit}
+        </span>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+    </div>
   );
 };
 
+const ApolloRocket = () => (
+  <div className="w-full h-full relative">
+    <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+      <ThermalObject
+        geometry="apollo-rocket"
+        colors={{
+          base: '#C8C0B2',
+          emissive: '#C87820',
+          glitchColor: '#ff4400',
+          glitchEmissive: '#ffaa00',
+          distort: 0.25,
+          glitchDistort: 0.7,
+          speed: 2,
+          glitchSpeed: 8
+        }}
+      />
+
+      <Environment preset="city" />
+    </Canvas>
+
+    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+  </div>
+);
+
+const FallbackVisual = () => (
+  <div className="w-full h-full relative">
+    <Canvas camera={{ position: [0, 0, 4], fov: 50 }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff0000" />
+
+      <ThermalObject
+        geometry="glitch-box"
+        colors={{
+          base: '#ffffff',
+          emissive: '#22c55e',
+          glitchColor: '#ffff00',
+          glitchEmissive: '#00ffff',
+          distort: 0.15,
+          glitchDistort: 0.5,
+          speed: 2,
+          glitchSpeed: 8
+        }}
+      />
+
+      <Environment preset="city" />
+    </Canvas>
+
+    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px]"></div>
+  </div>
+);
+
 const ProjectVisual = ({ projectId, variant }) => {
   const resolvedVariant = variant || projectId;
-  const scanlineClass = 'absolute inset-0 pointer-events-none scanline-overlay opacity-20';
-
-  if (resolvedVariant === 'mnist' || projectId === 'mnist-classifier') {
-    return (
-      <div className="relative h-full w-full">
-        <MNISTThermal />
-      </div>
-    );
-  }
 
   let visual = <FallbackVisual />;
-  let overlay = null;
 
   if (resolvedVariant === 'apollo-rocket' || projectId === 'kid-apollo') {
     visual = <ApolloRocket />;
   } else if (resolvedVariant === 'glitch-box' || projectId === 'glitch-bot') {
     visual = <GlitchBox />;
-    overlay = <div className={scanlineClass} />;
   } else if (resolvedVariant === 'spray-orb' || projectId === 'spray-bot') {
     visual = <SprayOrb />;
-    overlay = <div className={scanlineClass} />;
   } else if (resolvedVariant === 'skinsuit' || projectId === 'skinsuit') {
     visual = <SkinSuitVisual />;
+  } else if (resolvedVariant === 'mnist' || projectId === 'mnist-classifier') {
+    visual = <MNISTVisual />;
   }
 
   return (
     <div className="relative h-full w-full">
-      <SceneShell>{visual}</SceneShell>
-      {overlay}
+      {visual}
     </div>
   );
 };

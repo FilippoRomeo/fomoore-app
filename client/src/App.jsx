@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import {
   Github,
   Linkedin,
@@ -14,9 +14,10 @@ import GlitchSeparator from './components/GlitchSeparator';
 import ScrollProgress from './components/ScrollProgress';
 import SectionTitle from './components/layout/SectionTitle';
 import Card from './components/layout/Card';
-import ProjectGrid from './components/projects/ProjectGrid';
-import ProjectModal from './components/projects/ProjectModal';
 import { projects } from './data/projects';
+
+const ProjectGrid = lazy(() => import('./components/projects/ProjectGrid'));
+const ProjectModal = lazy(() => import('./components/projects/ProjectModal'));
 
 // --- Utility Components ---
 
@@ -98,6 +99,45 @@ const LiveClock = () => {
 };
 
 // --- Background Effect (Abstract Grid) ---
+
+const useNearViewport = (options = {}) => {
+  const [node, setNode] = useState(null);
+  const [isNear, setIsNear] = useState(() => typeof IntersectionObserver === 'undefined');
+
+  useEffect(() => {
+    if (isNear || !node) return undefined;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsNear(true);
+        observer.disconnect();
+      }
+    }, options);
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [isNear, node, options]);
+
+  return [setNode, isNear];
+};
+
+const ProjectGridGate = ({ projects, onOpenProject }) => {
+  const [setProjectsNode, shouldLoadProjects] = useNearViewport({ rootMargin: '500px 0px' });
+
+  return (
+    <div ref={setProjectsNode} className="min-h-[320px]">
+      {shouldLoadProjects ? (
+        <Suspense fallback={<div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-sm text-gray-500">Loading archive...</div>}>
+          <ProjectGrid projects={projects} onOpenProject={onOpenProject} />
+        </Suspense>
+      ) : (
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-sm text-gray-500">
+          Archive loading standby...
+        </div>
+      )}
+    </div>
+  );
+};
 
 
 // --- Main Component ---
@@ -397,7 +437,7 @@ export default function App() {
       <section id="projects" className="py-32 px-6 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle id="003">Classified Archives</SectionTitle>
-          <ProjectGrid projects={projects} onOpenProject={openProject} />
+          <ProjectGridGate projects={projects} onOpenProject={openProject} />
         </div>
       </section>
 
@@ -492,7 +532,9 @@ export default function App() {
       </footer>
 
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={closeProject} />
+        <Suspense fallback={null}>
+          <ProjectModal project={selectedProject} onClose={closeProject} />
+        </Suspense>
       )}
     </div>
   );
