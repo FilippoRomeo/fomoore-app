@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# local cleanup/download scripts
+cleanup-*.sh
+audit-*.sh
+download-*.sh
+curate-*.sh
+prune-*.cjs
+setup-*.sh
+
+# temporary asset staging
+public/assets/_downloads/
+public/assets/_manual/

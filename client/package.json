@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:kid-apollo": "npm --prefix projects-src/kid-apollo run build",
+    "copy:kid-apollo": "rm -rf public/projects/kid-apollo && mkdir -p public/projects && cp -a projects-src/kid-apollo/dist public/projects/kid-apollo",
+    "build:all": "npm run build:kid-apollo && npm run copy:kid-apollo && npm run build",
     "audit:kid-apollo": "node scripts/audit-kid-apollo.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
