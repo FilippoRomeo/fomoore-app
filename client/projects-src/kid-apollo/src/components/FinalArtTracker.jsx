@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { CheckCircle2, FileCheck2, FolderTree, PackageCheck } from "lucide-react";
+import { assetUrl } from "../utils/assetUrl.js";
 
-const DEFAULT_CONTRACT = "/assets/final-art/final-art-contract.json";
+const DEFAULT_CONTRACT = assetUrl("assets/final-art/final-art-contract.json");
 
 function normaliseStatus(status = "pending") {
   return status.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -110,7 +111,7 @@ export default function FinalArtTracker({ contractUrl = DEFAULT_CONTRACT }) {
         <div>
           <FolderTree size={15} aria-hidden="true" />
           <strong>Served base path</strong>
-          <span>{state.contract?.servedBasePath || "/assets/final-art"}</span>
+          <span>{state.contract?.servedBasePath || assetUrl("assets/final-art")}</span>
         </div>
         <div>
           <CheckCircle2 size={15} aria-hidden="true" />

@@ -1,4 +1,6 @@
-export const ROOM_OBJECT_MANIFEST_URL = "/assets/room-objects/manifest.json";
+import { assetUrl, normalizeAssetUrl } from "../utils/assetUrl.js";
+
+export const ROOM_OBJECT_MANIFEST_URL = assetUrl("assets/room-objects/manifest.json");
 
 export const FALLBACK_ROOM_OBJECTS = [
   {
@@ -67,7 +69,7 @@ export function normalizeRoomObject(item = {}) {
     status: item.status || "proxy",
     assetType: item.assetType || null,
     note: item.note || null,
-    url: item.url || item.servedPath || null,
+    url: normalizeAssetUrl(item.url || item.servedPath || null),
     disabled: Boolean(
       item.disabled ||
         item.hrefKey === "merch" ||

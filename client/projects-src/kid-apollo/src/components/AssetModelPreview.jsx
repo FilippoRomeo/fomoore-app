@@ -4,6 +4,44 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
+function isUnsafeLiveModel(file = {}) {
+  const values = [
+    file.url,
+    file.servedPath,
+    file.localPath,
+    file.name,
+    file.title,
+    file.path,
+    file.id,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return (
+    values.includes("kenney-modular-space-kit") ||
+    values.includes("kenney-space-station-kit") ||
+    values.includes("nature-pack-extended") ||
+    values.includes("/references/space/") ||
+    values.includes("references/space/") ||
+    values.endsWith(".obj")
+  );
+}
+
+function ReferenceAssetFallback({ file }) {
+  const path = file.url || file.servedPath || file.localPath || "unavailable";
+
+  return (
+    <div className="asset-model-debug" role="img" aria-label={`3D preview disabled for ${file.name || path}`}>
+      <strong>Reference asset</strong>
+      <span>{file.id || file.name || "Model file"}</span>
+      <code>{path}</code>
+      {file.url && <a href={file.url}>Open file</a>}
+    </div>
+  );
+}
+
+
 function fitObjectToPreview(object) {
   const root = new THREE.Group();
   root.add(object);
@@ -120,6 +158,10 @@ export default function AssetModelPreview({ file, onError }) {
     });
     setFailed(true);
   };
+
+  if (isUnsafeLiveModel(file)) {
+    return <ReferenceAssetFallback file={file} />;
+  }
 
   if (failed) {
     return <ModelDebugFallback file={file} />;

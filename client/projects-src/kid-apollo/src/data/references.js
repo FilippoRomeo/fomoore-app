@@ -3,20 +3,22 @@
 // Rule: React structures and displays references. It must not generate fake rockets,
 // fake goats, fake rooms, fake asteroids, or fake visual assets.
 
+import { assetUrl } from "../utils/assetUrl.js";
+
 const local = {
-  heroRocket: "/assets/hero/rocket-reference.jpg",
-  room: "/assets/room/room-reference.jpg",
-  roomUpload: "/assets/uploads/room-reference.jpg",
-  roomVideo: "/assets/uploads/room-reference-video.mp4",
+  heroRocket: assetUrl("assets/hero/rocket-reference.jpg"),
+  room: assetUrl("assets/room/room-reference.jpg"),
+  roomUpload: assetUrl("assets/uploads/room-reference.jpg"),
+  roomVideo: assetUrl("assets/uploads/room-reference-video.mp4"),
 
-  rocketTin: "/assets/references/rocket/tin-rocket-skyexpress.jpg",
-  apolloPatch: "/assets/references/materials/apollo-11-patch.jpg",
-  starfield: "/assets/references/space/starfield-nasa.jpg",
-  saucer: "/assets/references/space/toy-flying-saucer.jpg",
+  rocketTin: assetUrl("assets/references/rocket/tin-rocket-skyexpress.jpg"),
+  apolloPatch: assetUrl("assets/references/materials/apollo-11-patch.jpg"),
+  starfield: assetUrl("assets/references/space/starfield-nasa.jpg"),
+  saucer: assetUrl("assets/references/space/toy-flying-saucer.jpg"),
 
-  recordPlayer: "/assets/references/objects/record-player.jpg",
-  crtTv: "/assets/references/objects/crt-tv.jpg",
-  vinyl: "/assets/references/objects/vinyl-record.svg",
+  recordPlayer: assetUrl("assets/references/objects/record-player.jpg"),
+  crtTv: assetUrl("assets/references/objects/crt-tv.jpg"),
+  vinyl: assetUrl("assets/references/objects/vinyl-record.svg"),
 };
 
 export const referenceGroups = [

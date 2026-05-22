@@ -28,6 +28,7 @@ import {
 } from "./data/references.js";
 import useRoomObjects from "./hooks/useRoomObjects.js";
 import pdfPages from "./data/pdfText.json";
+import { assetUrl } from "./utils/assetUrl.js";
 import "./styles.css";
 
 const FallbackPreview = React.lazy(() => import("./components/FallbackPreview.jsx"));
@@ -37,33 +38,33 @@ const WorldPreview = React.lazy(() => import("./components/MotionPrototype.jsx")
 const RoomObjectLookdevPreviews = React.lazy(() => import("./components/RoomObjectLookdevPreviews.jsx"));
 
 const ASSETS = {
-  heroRocket: "/assets/hero/rocket-reference.jpg",
-  room: "/assets/room/room-reference.jpg",
-  roomVideo: "/assets/uploads/room-reference-video.mp4",
-  starfield: "/assets/hero/starfield-nasa-hero.jpg",
-  saucer: "/assets/references/space/toy-flying-saucer.jpg",
-  tinRocket: "/assets/references/rocket/tin-rocket-skyexpress.jpg",
-  apolloPatch: "/assets/references/materials/apollo-11-patch.jpg",
-  recordPlayer: "/assets/references/objects/record-player.jpg",
-  crtTv: "/assets/references/objects/crt-tv.jpg",
-  vinyl: "/assets/references/objects/vinyl-record.svg",
+  heroRocket: assetUrl("assets/hero/rocket-reference.jpg"),
+  room: assetUrl("assets/room/room-reference.jpg"),
+  roomVideo: assetUrl("assets/uploads/room-reference-video.mp4"),
+  starfield: assetUrl("assets/hero/starfield-nasa-hero.jpg"),
+  saucer: assetUrl("assets/references/space/toy-flying-saucer.jpg"),
+  tinRocket: assetUrl("assets/references/rocket/tin-rocket-skyexpress.jpg"),
+  apolloPatch: assetUrl("assets/references/materials/apollo-11-patch.jpg"),
+  recordPlayer: assetUrl("assets/references/objects/record-player.jpg"),
+  crtTv: assetUrl("assets/references/objects/crt-tv.jpg"),
+  vinyl: assetUrl("assets/references/objects/vinyl-record.svg"),
 };
 
 const MOODBOARD_ASSETS = {
-  catalog: "/assets/moodboard/catalog.json",
-  selection: "/assets/moodboard-selected/selection.json",
-  wideBackup: "/assets/moodboard-selected/selection-wide.json",
-  chromeColor: "/assets/moodboard/materials/chrome/metal009_1k-jpg_color.jpg",
-  redMetalColor: "/assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_color.jpg",
-  goatFabricColor: "/assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_color.jpg",
-  roomFloor: "/assets/moodboard/models/room/floor.glb",
-  roomWall: "/assets/moodboard/models/room/wall.glb",
-  roomRoundWindow: "/assets/moodboard/models/room/wall-window-round.glb",
-  fireSheet: "/assets/moodboard/sprites/fire/firesheet.png",
-  fireSheet5x5: "/assets/moodboard/sprites/fire/firesheet5x5.png",
-  engineLoop: "/assets/moodboard/sounds/sci-fi/spaceengine_000.ogg",
-  thrusterFire: "/assets/moodboard/sounds/sci-fi/thrusterfire_000.ogg",
-  impactMetal: "/assets/moodboard/sounds/sci-fi/impactmetal_000.ogg",
+  catalog: assetUrl("assets/moodboard/catalog.json"),
+  selection: assetUrl("assets/moodboard-selected/selection.json"),
+  wideBackup: assetUrl("assets/moodboard-selected/selection-wide.json"),
+  chromeColor: assetUrl("assets/moodboard/materials/chrome/metal009_1k-jpg_color.jpg"),
+  redMetalColor: assetUrl("assets/moodboard/materials/red-painted-metal/paintedmetal009_1k-jpg_color.jpg"),
+  goatFabricColor: assetUrl("assets/moodboard/materials/fabric-goat/fabric016_1k-jpg_color.jpg"),
+  roomFloor: assetUrl("assets/moodboard/models/room/floor.glb"),
+  roomWall: assetUrl("assets/moodboard/models/room/wall.glb"),
+  roomRoundWindow: assetUrl("assets/moodboard/models/room/wall-window-round.glb"),
+  fireSheet: assetUrl("assets/moodboard/sprites/fire/firesheet.png"),
+  fireSheet5x5: assetUrl("assets/moodboard/sprites/fire/firesheet5x5.png"),
+  engineLoop: assetUrl("assets/moodboard/sounds/sci-fi/spaceengine_000.ogg"),
+  thrusterFire: assetUrl("assets/moodboard/sounds/sci-fi/thrusterfire_000.ogg"),
+  impactMetal: assetUrl("assets/moodboard/sounds/sci-fi/impactmetal_000.ogg"),
 };
 
 const NAV = [

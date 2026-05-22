@@ -1,9 +1,15 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Boxes, Disc3, FileBox, Image as ImageIcon, Sparkles } from "lucide-react";
+import { assetUrl, normalizeAssetObject, normalizeAssetUrl } from "../utils/assetUrl.js";
 
-const DEFAULT_SELECTION = "/assets/moodboard-selected/selection.json";
-const ROOM_OBJECTS_MANIFEST = "/assets/room-objects/manifest.json";
+const DEFAULT_SELECTION = assetUrl("assets/moodboard-selected/selection.json");
+const ROOM_OBJECTS_MANIFEST = assetUrl("assets/room-objects/manifest.json");
 const LazyAssetModelPreview = React.lazy(() => import("./AssetModelPreview.jsx"));
+
+// Maximum items rendered per bucket section on first paint.
+// Clicking "Show more" reveals the next page. Items beyond the
+// visible slice are NOT mounted – no img src, no audio, no model.
+const BUCKET_PAGE_SIZE = 24;
 
 const BUCKETS = [
   {
@@ -207,7 +213,7 @@ function AssetPreview({ file }) {
         <div className="asset-material-grid">
           {file.maps.map((map) => (
             <figure key={map.url} className="asset-material-map">
-              <img src={map.url} alt={map.name} loading="lazy" />
+              <img src={map.url} alt={map.name} loading="lazy" decoding="async" />
               <figcaption>{map.name.replace(/^.*?_1k-jpg_?/i, "").replace(/\.[^.]+$/, "")}</figcaption>
             </figure>
           ))}
@@ -219,7 +225,7 @@ function AssetPreview({ file }) {
   if (file.type === "image") {
     return (
       <div className="asset-preview image">
-        <img src={file.url} alt={file.role || file.label || file.name} loading="lazy" />
+        <img src={file.url} alt={file.role || file.label || file.name} loading="lazy" decoding="async" />
       </div>
     );
   }
@@ -282,33 +288,61 @@ function AssetCard({ file }) {
   );
 }
 
+// Renders up to BUCKET_PAGE_SIZE items initially.
+// Items beyond the visible slice are NOT mounted – no img src,
+// no audio element, no model canvas.
 function BucketCard({ bucket }) {
+  const [visibleCount, setVisibleCount] = useState(BUCKET_PAGE_SIZE);
+
+  const visibleFiles = bucket.files.slice(0, visibleCount);
+  const remaining = bucket.files.length - visibleCount;
+  const nextPage = Math.min(remaining, BUCKET_PAGE_SIZE);
+
   return (
     <article className={`asset-bucket-card asset-bucket-${bucket.key}`}>
       <div className="asset-card-head">
-        <span>{bucket.count} visible cards</span>
+        <span>
+          {visibleCount < bucket.count
+            ? `${visibleCount} of ${bucket.count} cards`
+            : `${bucket.count} visible cards`}
+        </span>
         <h3>{bucket.title}</h3>
         <p>{bucket.description}</p>
       </div>
 
       <div className="asset-grid">
-        {bucket.files.map((file) => (
+        {visibleFiles.map((file) => (
           <AssetCard key={file.id || file.url || file.name} file={file} />
         ))}
       </div>
+
+      {remaining > 0 && (
+        <div className="asset-bucket-more">
+          <button
+            type="button"
+            className="asset-show-more"
+            onClick={() => setVisibleCount((n) => n + BUCKET_PAGE_SIZE)}
+          >
+            Show {nextPage} more asset{nextPage !== 1 ? "s" : ""}{" "}
+            <span aria-hidden="true">({remaining} remaining)</span>
+          </button>
+        </div>
+      )}
     </article>
   );
 }
 
 function normalizeSelectionFile(file, index) {
+  const url = normalizeAssetUrl(file.url || file.servedPath || null);
+
   return {
-    id: file.id || file.url || `${file.name}-${index}`,
-    name: file.name || fileNameFromPath(file.url),
+    id: file.id || url || `${file.name}-${index}`,
+    name: file.name || fileNameFromPath(url),
     label: file.label || null,
     role: file.role || file.type || "uncategorised",
     status: file.status || "downloaded",
-    type: file.type || typeFromUrl(file.url),
-    url: file.url || file.servedPath || null,
+    type: file.type || typeFromUrl(url),
+    url,
     localPath: file.localPath,
     sourceUrl: file.sourceUrl,
     sourcePage: file.sourcePage,
@@ -316,7 +350,7 @@ function normalizeSelectionFile(file, index) {
 }
 
 function normalizeRoomObject(object) {
-  const url = object.url || object.servedPath || null;
+  const url = normalizeAssetUrl(object.url || object.servedPath || null);
 
   return {
     id: `room-${object.id || object.label}`,
@@ -339,6 +373,7 @@ function RoomObjectAssetSection() {
     note: "",
     files: [],
   });
+  const [visibleCount, setVisibleCount] = useState(BUCKET_PAGE_SIZE);
 
   useEffect(() => {
     let cancelled = false;
@@ -350,11 +385,14 @@ function RoomObjectAssetSection() {
       })
       .then((manifest) => {
         if (cancelled) return;
-        const files = Array.isArray(manifest.objects) ? manifest.objects.map(normalizeRoomObject) : [];
+        const normalizedManifest = normalizeAssetObject(manifest);
+        const files = Array.isArray(normalizedManifest.objects)
+          ? normalizedManifest.objects.map(normalizeRoomObject)
+          : [];
         setState({
           loading: false,
           error: "",
-          note: manifest.note || "",
+          note: normalizedManifest.note || "",
           files,
         });
       })
@@ -373,10 +411,20 @@ function RoomObjectAssetSection() {
     };
   }, []);
 
+  const visibleFiles = state.files.slice(0, visibleCount);
+  const remaining = state.files.length - visibleCount;
+  const nextPage = Math.min(remaining, BUCKET_PAGE_SIZE);
+
   return (
     <article className="asset-bucket-card room-object-assets">
       <div className="asset-card-head">
-        <span>{state.loading ? "loading" : `${state.files.length} room objects`}</span>
+        <span>
+          {state.loading
+            ? "loading"
+            : visibleCount < state.files.length
+              ? `${visibleCount} of ${state.files.length} room objects`
+              : `${state.files.length} room objects`}
+        </span>
         <h3>Room object look-dev manifest</h3>
         <p>
           Navigation objects are visible here as look-dev assets only. Manual-needed cards mark objects that
@@ -389,11 +437,26 @@ function RoomObjectAssetSection() {
       {state.error && <p className="asset-pack-error">{state.error}</p>}
 
       {!state.loading && !state.error && (
-        <div className="asset-grid">
-          {state.files.map((file) => (
-            <AssetCard key={file.id} file={file} />
-          ))}
-        </div>
+        <>
+          <div className="asset-grid">
+            {visibleFiles.map((file) => (
+              <AssetCard key={file.id} file={file} />
+            ))}
+          </div>
+
+          {remaining > 0 && (
+            <div className="asset-bucket-more">
+              <button
+                type="button"
+                className="asset-show-more"
+                onClick={() => setVisibleCount((n) => n + BUCKET_PAGE_SIZE)}
+              >
+                Show {nextPage} more asset{nextPage !== 1 ? "s" : ""}{" "}
+                <span aria-hidden="true">({remaining} remaining)</span>
+              </button>
+            </div>
+          )}
+        </>
       )}
     </article>
   );
@@ -419,13 +482,16 @@ export default function MoodboardAssetPack({ assets = {} }) {
       })
       .then((data) => {
         if (cancelled) return;
-        const files = Array.isArray(data.files) ? data.files.map(normalizeSelectionFile) : [];
+        const normalizedData = normalizeAssetObject(data);
+        const files = Array.isArray(normalizedData.files)
+          ? normalizedData.files.map(normalizeSelectionFile)
+          : [];
         setState({
           loading: false,
           error: "",
-          note: data.note || "",
+          note: normalizedData.note || "",
           files,
-          count: Number(data.count || files.length),
+          count: Number(normalizedData.count || files.length),
         });
       })
       .catch((error) => {

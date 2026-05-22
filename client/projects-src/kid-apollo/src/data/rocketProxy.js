@@ -1,4 +1,6 @@
-export const ROCKET_PROXY_URL = "/assets/final-art/rocket/source/kid-apollo-rocket.proxy.obj";
+import { assetUrl } from "../utils/assetUrl.js";
+
+export const ROCKET_PROXY_URL = assetUrl("assets/final-art/rocket/source/kid-apollo-rocket.proxy.obj");
 export const ROCKET_PROXY_SCALE = 1.08;
 export const ROCKET_PROXY_POSITION = [0, -1.35, -0.2];
 export const ROCKET_PROXY_ROTATION = [0, -0.051, 0];

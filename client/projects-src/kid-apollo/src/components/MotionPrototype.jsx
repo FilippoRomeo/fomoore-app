@@ -6,6 +6,7 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { gsap } from "gsap";
 import { RotateCcw, Disc3, Tv, Smartphone, Mail, Music2, Package } from "lucide-react";
 import { LINK_TARGETS } from "../data/linkTargets.js";
+import { assetUrl } from "../utils/assetUrl.js";
 import {
   PORTHOLE_OFFSET,
   ROCKET_PROXY_POSITION,
@@ -1168,7 +1169,7 @@ export default function WorldPreview() {
           <div className="room-reveal-panel">
             <div
               className="room-reveal-bg"
-              style={{ backgroundImage: "url(/assets/room/room-reference.jpg)" }}
+              style={{ backgroundImage: `url(${assetUrl("assets/room/room-reference.jpg")})` }}
             />
             <div className="room-reveal-overlay" />
             <div className="room-reveal-content" style={{ opacity: linksVisible ? 1 : 0 }}>
